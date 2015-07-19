@@ -15,10 +15,10 @@
 		<div><p id='tweet'>Hey! #salutlescopains, c'est le matin avec @lolotte sur http://www.jeuxvideo.com/videos/435016/comprendre-le-potentiel-de-guild-of-dungeoneering-en-trois-minutes.htm!</p></div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="twitParser.min.js"></script>
+	<script src="dev/twitParser.js"></script>
 	<script>
 		jQuery(function(){
-			$('#tweet').twitParser({user: 'https://twitter.com/', hashtag: 'https://twitter.com/hashtag/', url: 'true'});
+			$('#tweet').twitParser({user: 'https://twitter.com/', hashtag: 'https://twitter.com/hashtag/', url: 'minify'});
 		});
 	</script>
 </html>

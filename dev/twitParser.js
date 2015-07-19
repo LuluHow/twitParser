@@ -103,10 +103,14 @@
 				for(var j = 0; j < matches.length; j++) {
 					var isOk = matches[j].search(patternUrl);
 						if(isOk != -1) {
-							var url = crc16(matches[j]);
-							matches[j] = "<a href='"+matches[j]+"'>"+'al.li/'+url.toString(16)+"</a>";
+							if(parametres.url === 'minify') {
+								var url = crc16(matches[j]);
+								matches[j] = "<a href='"+matches[j]+"'>"+'al.li/'+url.toString(16)+"</a>";
+							}
+							else {
+								matches[j] = "<a href='"+matches[j]+"'>"+matches[j]+"</a>";
+							}
 						}
-					
 				}
 				node.html(matches.join(""));
 			}
